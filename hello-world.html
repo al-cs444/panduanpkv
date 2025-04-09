@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Panduan Permainan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 40px;
+      line-height: 1.6;
+      color: #333;
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    pre {
+      background-color: #fff;
+      border-left: 4px solid #2980b9;
+      padding: 15px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>DOMINO 99 (TIE)</h2>
+  <pre>
+1, balak tertinggi
+2, kartu dengan bulatan tertinggi di kotak bawah
+3, kartu dengan bulatan tertinggi di kotak atas
+  </pre>
+
+  <h2>DOMINO JACKPOT (Payout Rate)</h2>
+  <pre>
+1, murni besar 80%
+2, kartu balak 20%
+3, kartu murni besar 10%
+4, kartu murni kecil 5%
+  </pre>
+
+  <h2>POKER JACKPOT (Payout Rate)</h2>
+  <pre>
+1, Royal flush 80%
+2, Straight flush 30%
+3, Four of a kind 10%
+4, Full house
+5, Flush
+6, Straight
+7, Three of a kind
+8, Two pair
+9, One pair
+10, High card
+  </pre>
+
+  <h2>POKER (TIE)</h2>
+  <pre>
+1. Tie pada "High Card" (Kartu Tinggi)
+Kapan Terjadi?: Terjadi ketika tidak ada pemain yang memiliki kombinasi tangan yang lebih kuat (seperti pair, straight, flush, dll.), sehingga pemenangnya ditentukan berdasarkan kartu tertinggi.
+
+Jika Ada Tie: Jika dua pemain memiliki kartu tinggi yang sama, maka kita bandingkan kicker (kartu tertinggi yang tidak terlibat dalam kombinasi utama).
+
+Contoh:
+
+Pemain 1: A♠ 10♣ 7♠ 5♦ 2♠ (Ace-high)
+
+Pemain 2: A♦ K♣ 8♠ 4♦ 3♠ (Ace-high)
+
+Hasil: Karena kedua pemain memiliki Ace-high, kita bandingkan kicker mereka:
+
+Pemain 1: 10♣.
+
+Pemain 2: K♣.
+
+Pemenang: Pemain 2, karena King lebih tinggi daripada 10.
+
+2. Tie pada "Pair" (Sepasang Kartu)
+Kapan Terjadi?: Terjadi ketika dua pemain memiliki pair yang sama. Pemenang ditentukan dengan membandingkan kicker (kartu yang tidak terlibat dalam pasangan).
+
+Contoh:
+
+Pemain 1: 8♠ 8♦ 10♠ 3♣ 2♠ (Pair of 8s)
+
+Pemain 2: 8♣ 8♥ Q♠ 4♦ 3♠ (Pair of 8s)
+
+Hasil: Kedua pemain memiliki Pair of 8s.
+
+Pemain 1 memiliki 10♠ sebagai kicker.
+
+Pemain 2 memiliki Q♠ sebagai kicker.
+
+Pemenang: Pemain 2, karena Queen lebih tinggi daripada 10.
+
+Jika kicker pertama sama, bandingkan kicker kedua dan seterusnya hingga ada pemenang atau tie.
+
+3. Tie pada "Two Pair" (Dua Pasang)
+Kapan Terjadi?: Terjadi jika dua pemain memiliki dua pasangan dengan nilai yang sama. Pemenang ditentukan berdasarkan kicker tertinggi.
+
+Contoh:
+
+Pemain 1: 8♠ 8♦ 5♠ 5♣ K♠ (Two Pair: 8s and 5s)
+
+Pemain 2: 8♣ 8♥ 5♠ 5♦ Q♠ (Two Pair: 8s and 5s)
+
+Hasil: Kedua pemain memiliki Two Pair yang sama.
+
+Pemain 1 memiliki K♠ sebagai kicker.
+
+Pemain 2 memiliki Q♠ sebagai kicker.
+
+Pemenang: Pemain 1, karena King lebih tinggi daripada Queen.
+
+Jika kicker pertama sama, bandingkan kicker kedua dan seterusnya.
+
+4. Tie pada "Three of a Kind" (Tiga Kartu yang Sama)
+Kapan Terjadi?: Terjadi ketika dua pemain memiliki Three of a Kind yang sama. Pemenang ditentukan berdasarkan kicker (kartu lainnya).
+
+Contoh:
+
+Pemain 1: 9♠ 9♦ 9♣ Q♠ 3♠ (Three of a Kind: 9s)
+
+Pemain 2: 9♠ 9♥ 9♦ J♠ 4♠ (Three of a Kind: 9s)
+
+Hasil: Kedua pemain memiliki Three of a Kind yang sama (tiga 9).
+
+Pemain 1 memiliki Q♠ sebagai kicker.
+
+Pemain 2 memiliki J♠ sebagai kicker.
+
+Pemenang: Pemain 1, karena Queen lebih tinggi daripada Jack.
+
+Jika kicker pertama sama, bandingkan kicker kedua.
+
+5. Tie pada "Straight"
+Kapan Terjadi?: Terjadi jika dua pemain memiliki straight dengan nilai kartu yang sama. Dalam hal ini, hasilnya akan selalu tie.
+
+Contoh:
+
+Pemain 1: 4♠ 5♣ 6♠ 7♦ 8♠ (Straight: 4-5-6-7-8)
+
+Pemain 2: 4♦ 5♠ 6♣ 7♠ 8♦ (Straight: 4-5-6-7-8)
+
+Hasil: Kedua pemain memiliki Straight yang sama (4-5-6-7-8), jadi hasilnya adalah tie.
+
+6. Tie pada "Flush"
+Kapan Terjadi?: Terjadi ketika dua pemain memiliki flush yang sama, yaitu lima kartu dengan jenis yang sama. Pemenang ditentukan oleh kartu tertinggi di flush tersebut.
+
+Contoh:
+
+Pemain 1: 2♠ 5♠ 8♠ J♠ K♠ (Flush, King-high)
+
+Pemain 2: 3♠ 6♠ 7♠ 10♠ K♠ (Flush, King-high)
+
+Hasil: Kedua pemain memiliki Flush dengan kartu King tertinggi.
+
+Bandingkan kartu kedua tertinggi (misalnya J♠ vs 10♠).
+
+Pemenang: Pemain 1, karena Jack lebih tinggi dari 10.
+
+Jika kartu kedua tertinggi juga sama, bandingkan kartu-kartu berikutnya hingga ada pemenang.
+
+7. Tie pada "Full House"
+Kapan Terjadi?: Terjadi jika dua pemain memiliki full house dengan set yang sama.
+
+Contoh:
+
+Pemain 1: 3♠ 3♦ 3♣ 5♠ 5♣ (Full House: 3s over 5s)
+
+Pemain 2: 3♠ 3♥ 3♦ 5♠ 5♠ (Full House: 3s over 5s)
+
+Hasil: Kedua pemain memiliki Full House yang sama (3s over 5s), jadi hasilnya adalah tie.
+
+8. Tie pada "Four of a Kind" (Empat Kartu yang Sama)
+Kapan Terjadi?: Terjadi jika dua pemain memiliki four of a kind dengan nilai yang sama. Pemenang ditentukan oleh kicker (kartu kelima).
+
+Contoh:
+
+Pemain 1: 10♠ 10♦ 10♣ 10♥ 3♠ (Four of a Kind: 10s)
+
+Pemain 2: 10♠ 10♦ 10♣ 10♥ 7♠ (Four of a Kind: 10s)
+
+Hasil: Kedua pemain memiliki Four of a Kind 10s, jadi pemenangnya ditentukan oleh kicker:
+
+Pemain 1 memiliki 3♠ sebagai kicker.
+
+Pemain 2 memiliki 7♠ sebagai kicker.
+
+Pemenang: Pemain 2, karena 7 lebih tinggi dari 3.
+
+9. Tie pada "Straight Flush"
+Kapan Terjadi?: Terjadi jika dua pemain memiliki straight flush yang sama.
+
+Kasus Tie: Jika kedua pemain memiliki straight flush yang identik (misalnya, 10-J-Q-K-A dengan suit yang sama), maka hasilnya adalah tie.
+
+Contoh:
+
+Pemain 1: 10♠ J♠ Q♠ K♠ A♠ (Straight Flush)
+
+Pemain 2: 10♦ J♦ Q♦ K♦ A♦ (Straight Flush)
+
+Hasil: Kedua pemain memiliki Straight Flush yang sama (10-J-Q-K-A), jadi tie.
+
+Kesimpulan Umum:
+Jika pemain memiliki kombinasi tangan yang sama, maka kicker (kartu yang tidak terlibat dalam kombinasi utama) akan digunakan untuk membandingkan siapa yang menang.
+
+Jika semua kicker juga sama, maka tie terjadi, dan pot dibagi rata.
+
+Untuk straight flush atau four of a kind yang identik, hasilnya adalah tie.
+
+  </pre>
+
+  <h2>SAKONG JACKPOT (Buy Jackpot)</h2>
+  <pre>
+1, AAA WIN JACKPOT
+2, KKK WIN 500,000
+3, QQQ WIN 400,000
+4, JJJ WIN 300,000
+5, 10 10 10 WIN 200,000
+6, 3 GAMBAR 50,000
+  </pre>
+
+  <h2>BD QQ (Kartu spesial)</h2>
+  <pre>
+1, kartu 6 dewa bayaran x4
+2, kartu balak bayaran x3
+3, kartu murni besar bayaran x2
+4, kartu murni kecil bayaran x2
+
+NB: pemain yang mendapatkan kartu dengan Nilai 99 maka di bayar double namun jika 1 meja terdapat 2 player atau lebih yang mendapatkan kartu dengan nilai 99 maka akan tetap di bayar normal saja.
+  </pre>
+
+  <h2>CAPSA SUSUN (Payout Rate)</h2>
+  <pre>
+Dragon 65% Jackpot
+Royal Flush 35% Jackpot
+Straight Flush 5% Jackpot
+  </pre>
+
+  <h2>Panduan Capsa Susun (Full Guide)</h2>
+  <pre>
+Capsa Susun adalah permainan kartu yang dimainkan dengan 52 kartu remi dan biasanya dimainkan oleh 4 pemain. Permainan ini terkenal di Asia Tenggara, terutama di Indonesia. Dalam Capsa Susun, tujuannya adalah menyusun 13 kartu yang dibagikan menjadi 3 baris (3 hand) dengan aturan tertentu untuk menentukan pemenang.
+
+Aturan Dasar Capsa Susun
+Jumlah Pemain: 2 hingga 4 pemain (biasanya dimainkan oleh 4 pemain).
+
+Jumlah Kartu: Setiap pemain mendapatkan 13 kartu dari dek 52 kartu remi.
+
+Pembagian Kartu: Kartu dibagikan secara acak kepada pemain dan masing-masing pemain harus menyusun kartu mereka dalam 3 baris:
+
+Baris pertama (atas): 3 kartu.
+
+Baris kedua (tengah): 5 kartu.
+
+Baris ketiga (bawah): 5 kartu.
+
+Setiap baris memiliki aturan peringkat tertentu yang harus diikuti.
+
+Susunan Kartu
+Baris Atas (3 Kartu)
+
+Harus memiliki kartu paling rendah, seperti high card atau pair.
+
+Contoh Susunan: 3♠ 4♣ 5♦ (kartu terendah).
+
+Tidak bisa memiliki pair, three of a kind, atau straight flush di sini.
+
+Baris Tengah (5 Kartu)
+
+Baris ini harus memiliki kombinasi kartu yang lebih baik daripada baris atas.
+
+Bisa berupa pair, two pair, three of a kind, atau bahkan straight.
+
+Baris Bawah (5 Kartu)
+
+Harus memiliki kombinasi kartu terbaik dari ketiga baris.
+
+Biasanya, baris bawah ini berisi straight, flush, four of a kind, atau bahkan full house.
+
+Aturan Penyusunan Kartu
+Baris Bawah: Harus merupakan kombinasi terbaik, seperti straight flush, four of a kind, atau full house.
+
+Baris Tengah: Biasanya diisi dengan three of a kind, straight, two pair, atau pair.
+
+Baris Atas: Baris ini biasanya diisi dengan kartu tinggi, seperti high card, pair, atau kartu berurutan yang lebih rendah.
+
+Contoh Penyusunan: Misalkan seorang pemain mendapatkan kartu:
+3♠ 5♠ 9♠ J♦ 2♠ 7♣ 8♠ Q♦ 10♣ K♠ 4♠ 6♣ 10♠ 8♣
+
+Pemain bisa menyusunnya seperti ini:
+
+Baris Atas (3 Kartu): 2♠ 3♠ 4♠ (High Card)
+
+Baris Tengah (5 Kartu): 5♠ 6♠ 7♠ 8♠ 9♠ (Straight Flush)
+
+Baris Bawah (5 Kartu): 10♠ J♦ Q♦ K♠ (Straight Flush)
+
+Aturan Khusus Penyusunan
+Kombinasi Kartu Tidak Boleh Tertukar: Kombinasi kartu pada baris atas, tengah, dan bawah tidak bisa saling tertukar. Baris bawah harus lebih baik dari baris tengah, dan baris tengah harus lebih baik dari baris atas.
+
+Peringkat Kombinasi: Pada umumnya, peringkat kombinasi kartu yang digunakan adalah sebagai berikut:
+
+Royal Flush: 5 kartu dengan urutan berurutan yang sama jenisnya dari 10 hingga Ace (contoh: 10♠ J♠ Q♠ K♠ A♠).
+
+Straight Flush: 5 kartu berurutan yang sama jenisnya (contoh: 3♠ 4♠ 5♠ 6♠ 7♠).
+
+Four of a Kind: 4 kartu dengan angka yang sama (contoh: 7♠ 7♦ 7♣ 7♥).
+
+Full House: 3 kartu dengan angka yang sama dan 2 kartu dengan angka yang sama lainnya (contoh: 3♠ 3♦ 3♣ 9♠ 9♦).
+
+Flush: 5 kartu dengan jenis yang sama, tanpa urutan yang berurutan (contoh: 2♠ 5♠ 8♠ J♠ K♠).
+
+Straight: 5 kartu dengan urutan berurutan, tanpa memperhatikan jenis (contoh: 2♠ 3♣ 4♦ 5♠ 6♥).
+
+Three of a Kind: 3 kartu dengan angka yang sama (contoh: 4♠ 4♦ 4♣).
+
+Two Pair: 2 pasang kartu dengan angka yang sama (contoh: 8♠ 8♦ 5♠ 5♣).
+
+Pair: 2 kartu dengan angka yang sama (contoh: 7♠ 7♦).
+
+High Card: Jika tidak ada kombinasi lain, kartu tertinggi akan menjadi pemenang.
+
+Cara Menentukan Pemenang
+Setelah semua pemain menyusun kartu mereka dalam tiga baris, kartu-kartu tersebut dibandingkan berdasarkan kombinasi terbaiknya.
+
+Pemenang ditentukan oleh pemain yang memiliki kombinasi terbaik di semua baris.
+
+Pemenang akan diberikan nilai untuk masing-masing baris: baris atas, tengah, dan bawah.
+
+Jika pemain memiliki kombinasi yang lebih baik di baris bawah, tengah, dan atas, maka pemain tersebut menang. Jika ada tie, maka pot dibagi sesuai jumlah pemenang.
+
+Contoh Permainan
+Misalkan pemain A dan pemain B memiliki kartu seperti ini:
+
+Pemain A
+Baris Atas: 3♠ 4♠ 5♠ (Straight Flush)
+
+Baris Tengah: 9♠ 10♠ J♠ Q♠ K♠ (Royal Flush)
+
+Baris Bawah: 2♠ 3♦ 5♠ 7♣ 10♠ (Full House)
+
+Pemain B
+Baris Atas: 7♠ 8♠ 9♠ (Straight Flush)
+
+Baris Tengah: 10♠ J♠ Q♠ K♠ A♠ (Royal Flush)
+
+Baris Bawah: 4♠ 4♦ 4♣ 7♠ 7♦ (Full House)
+
+Pemenang:
+
+Pemain A menang di baris atas dan bawah, tetapi baris tengahnya kalah.
+
+Jika berdasarkan baris tengah (royal flush), Pemain B menang, tetapi baris atas dan bawah lebih baik milik Pemain A.
+
+Maka Pemain A akan menang, karena di baris bawah dan atas ia menang.
+
+Strategi Dasar dalam Capsa Susun
+Prioritaskan Baris Bawah: Selalu pastikan baris bawah memiliki kombinasi terbaik, seperti straight flush atau four of a kind.
+
+Tingkatkan Baris Tengah: Jika baris bawah sudah kuat, fokuskan pada baris tengah agar bisa memiliki kombinasi seperti three of a kind atau two pair.
+
+Baris Atas Lebih Fleksibel: Di baris atas, kamu hanya perlu memastikan kartu tersebut kecil dan tidak lebih tinggi dari baris tengah.
+  </pre>
+
+</body>
+</html>
